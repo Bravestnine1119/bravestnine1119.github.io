@@ -11,13 +11,7 @@ html {
 }
 
 body {
-
-
     font-family: "Nunito", sans-serif;
-
-
-
-
     font-size: 16px;
     /* 1rem = 10px */
     background-image: var(--bacground-image);
@@ -44,9 +38,15 @@ body {
     justify-content: center; /*Centra en lo vertical*/
 }
 
+ /* Modificar el margen entre las columnas */
+ .separador .row.no-gutters [class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 /*Contenedores*/
 .contenedor {
-    max-width: 60rem;
+    min-width: 60rem;
     background: transparent;
     border: 2px solid rgba(255,255,255,.2);
     backdrop-filter: blur(20px);
@@ -73,8 +73,6 @@ legend {
     box-sizing: border-box; /* Asegura que el ancho incluya el relleno y el borde */
     padding: 1rem;
     margin-top: 2rem;
-
-   
 }
 
 .entrada:focus {
@@ -86,18 +84,22 @@ legend {
     width: 100%;
 }
 
+/* Estilos para todos los select dentro del formulario con la clase "contenedor" */
 .contenedor select {
-    /* Estilos para todos los select dentro del formulario con la clase "contenedor" */
-    width: 40%;
-    margin-right: 1rem;
+    width: 100%;
+    /* margin-right: .5rem; */
+    padding: 0; 
 }
 
-.contenedor input:nth-child(2) {
-    /* Estilos para todos los inputs dentro del formulario */
-    width: 60%;
+ /* Estilos para el input de tipo teléfono */
+.separador input[type="tel"] {
+    width: 100%;
+    padding: 0;
+    /* margin: 0; */
     
 }
 
+/* Estilos para el textarea*/
 .contenedor textarea {
     /* background-color: black; */
     width: 100%;
@@ -105,16 +107,11 @@ legend {
     /* border: 2px solid black; */
 }
 
-
-
-
-
-
+/* Estilos para el separador de los inputs */
 .separador {
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-
 
 /* Tipografia */
 legend {
@@ -123,31 +120,40 @@ legend {
 }
 
 label {
-    
     font-weight: 400;
 }
 
 
-
-/* // Sass map from `_variables.scss` */
-/* // Override this and recompile your Sass to generate different states */
-$form-validation-states: map-merge(
-  (
-    "valid": (
-      "color": $form-feedback-valid-color,
-      "icon": $form-feedback-icon-valid
-    ),
-    "invalid": (
-      "color": $form-feedback-invalid-color,
-      "icon": $form-feedback-icon-invalid
-    )
-  ),
-  $form-validation-states
-);
-
-/* // Loop from `_forms.scss` */
-/* // Any modifications to the above Sass map will be reflected in your compiled */
-/* // CSS via this loop. */
-@each $state, $data in $form-validation-states {
-  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+/*Media Querys*/
+@media (width <= 400px){
+    body {
+        /* background-image: none; */
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        
+    }
+    .contenedor {
+        max-width: 80%;
+        max-height: 108%;
+        overflow: auto;
+    }
 }
+
+
+@media (width <= 599px){
+   /*Contenedores*/
+.contenedor {
+    min-width: 20rem;
+    padding: auto;
+    margin: auto;
+}
+
+legend {
+    text-align: center;
+    /* color: white; */
+    padding: auto;
+    margin: auto;
+}
+
+}
+
