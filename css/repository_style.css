@@ -17,19 +17,21 @@ body {
     font-size: 16px;
     /* 1rem = 10px */
     background-image: var(--bacground-image);
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* margin: 0 auto; */
     margin: 0;
-    height: 100vh; /* Esto asegura que el body ocupe toda la altura del viewport */
+    height: 100vh;
+    /* Esto asegura que el body ocupe toda la altura del viewport */
     text-align: center;
+    font-family: "Kanit", sans-serif;
 }
 
 
 img {
-    
+
     border-radius: 50%;
     width: 5%;
     height: auto;
@@ -43,7 +45,7 @@ img {
     padding: 2rem;
 
     background-color: rgba(0, 0, 0, 0.5);
-   
+
 }
 
 .separador {
@@ -52,53 +54,62 @@ img {
 }
 
 .carousel-item {
-    height: 40rem; /* ajusta la altura según sea necesario */
+    height: 40rem;
+    /* ajusta la altura según sea necesario */
     background-size: cover;
     background-position: center;
-    
-   
-  }
 
-  /* Enlaces estilizados dentro del carrusel */
-  .carousel-item a {
+
+}
+
+/* Enlaces estilizados dentro del carrusel */
+.carousel-item a {
     display: block;
     width: 100%;
     height: 100%;
     background-image: var(--landing-page-image);
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     border-radius: 10px;
-  
-  }
 
-  .carousel-item:nth-child(2) > a {
+}
+
+.carousel-item:nth-child(2)>a {
     /* Estilos para el enlace dentro del segundo elemento del carrusel */
     background-image: var(--form-image);
-  }
+}
 
-  .carousel-item:nth-child(3) > a {
+.carousel-item:nth-child(3)>a {
     /* Estilos para el enlace dentro del segundo elemento del carrusel */
     background-image: var(--login-image);
-  }
+}
 
 
-  
-  .carousel-control-prev,
+
+.carousel-control-prev,
 .carousel-control-next {
-  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo de las flechas */
-  width: 50px; /* Ancho de las flechas */
-  height: 50px; /* Altura de las flechas */
-  border-radius: 50%; /* Forma circular para las flechas */
-  top: 50%; /* Alineación vertical al centro */
-  transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color de fondo de las flechas */
+    width: 50px;
+    /* Ancho de las flechas */
+    height: 50px;
+    /* Altura de las flechas */
+    border-radius: 50%;
+    /* Forma circular para las flechas */
+    top: 50%;
+    /* Alineación vertical al centro */
+    transform: translateY(-50%);
+    /* Ajuste para centrar verticalmente */
 }
 
 .carousel-control-prev {
-  left: -25px; /* Posición izquierda de la flecha previa */
+    left: -25px;
+    /* Posición izquierda de la flecha previa */
 }
 
 .carousel-control-next {
-  right: -25px; /* Posición derecha de la flecha siguiente */
+    right: -25px;
+    /* Posición derecha de la flecha siguiente */
 }
 
 .carousel-item h3 {
@@ -108,10 +119,14 @@ img {
     transform: translate(-50%, -50%);
     color: white;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo */
-    width: 30%; /* Ancho del fondo del título */
-    text-align: center; /* Centra el texto horizontalmente */
-    font-size:large; /* Ajusta el tamaño del texto según sea necesario */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color de fondo */
+    width: 30%;
+    /* Ancho del fondo del título */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    font-size: large;
+    /* Ajusta el tamaño del texto según sea necesario */
     border-radius: 10px;
 }
 
@@ -121,11 +136,13 @@ img {
 
 
 /* Distribución */
-.flex-column{
+.flex-column {
     display: flex;
     /* flex-direction: column; */
-    align-items: center; /*Centra en lo horizontal*/
-    justify-content: center; /*Centra en lo vertical*/
+    align-items: center;
+    /*Centra en lo horizontal*/
+    justify-content: center;
+    /*Centra en lo vertical*/
 }
 
 /* Tipografia */
@@ -155,32 +172,48 @@ h3 {
 }
 
 
-@media (width <= 599px){
+@media (width <=599px) {
 
 
     /*Contenedores*/
-.contenedor {
-    width: auto;
-    /* margin: 0 auto; */
-    /* background-color: red; */
-   
-}
-
-img {
-    
-    border-radius: 50%;
-    width: 10%;
-    height: auto;
-}
-
- 
- }
-
- @media (768px <= width <= 1024px){
     .contenedor {
         width: auto;
         /* margin: 0 auto; */
         /* background-color: red; */
-       
+
     }
- }
+
+    img {
+
+        border-radius: 50%;
+        width: 10%;
+        height: auto;
+    }
+
+    .carousel-item {
+        height: 25rem; /* ajusta la altura según sea necesario */
+        background-size: cover;
+        background-position: center;
+        
+       
+      }
+
+}
+
+@media (768px <=width <=1024px) {
+    .contenedor {
+        width: auto;
+        /* margin: 0 auto; */
+        /* background-color: red; */
+
+    }
+
+    .carousel-item {
+        height: 40rem;
+        /* ajusta la altura según sea necesario */
+        background-size: cover;
+        background-position: center;
+
+
+    }
+}
