@@ -144,7 +144,7 @@ label {
    /*Contenedores*/
 .contenedor {
     min-width: 20rem;
-    padding: auto;
+    padding: 3.5rem;
     margin: auto;
 }
 
