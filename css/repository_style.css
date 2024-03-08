@@ -1,7 +1,8 @@
 :root {
-    --imagen-fondo: url("https://images.unsplash.com/photo-1682686581427-7c80ab60e3f3?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    --landing-page: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    --formulario: url("https://images.unsplash.com/photo-1560692901-45d529ed05bf?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    --bacground-image: url("https://images.unsplash.com/photo-1707343848873-d6a834b5f9b9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    --landing-page-image: url("https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    --form-image: url("https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    --login-image: url("https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=2830&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 /*  Globales **/
@@ -14,154 +15,107 @@ html {
 
 body {
     font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* 1rem = 10px */
+    background-image: var(--bacground-image);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* margin: 0 auto; */
     margin: 0;
-    padding: 0;
+    height: 100vh; /* Esto asegura que el body ocupe toda la altura del viewport */
 }
 
-.background{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh; /* Ajusta la altura según sea necesario */
-    background-image: linear-gradient(to bottom,  #7F8DA3, #C5B7AE, #131414, #DE9966); 
-    background-repeat: no-repeat;
-}
-
-/*Contenedor*/
+/*Contenedores*/
 .contenedor {
-    width: 150rem;
-    height: 90rem;
+    width: 120rem;
+    /* margin: 0 auto; */
     /* background-color: red; */
-    margin: 5rem;
-    /* background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)), var(--imagen-fondo); */
-    background-image: var(--imagen-fondo);
-    /*background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
-        var(--imagen-fondo);*/
+    height: 50rem;
+}
+
+.carousel-item {
+    height: 40rem; /* ajusta la altura según sea necesario */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    /* background-position: center; */
-    /* border-radius: 2%; */
-
-    color:white;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.contenedor-secundario {
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 5rem;
-    height: 25%;
-    text-align: center;
-    border-radius: 20px
-}
-
-.contenedor-secundario:nth-child(3) {
-    height: 40%;
     
-}
-
-
-
-.carrousel{
-    width: 100%;
-    max-width: 40%;
-    /* background-color: lightskyblue; */
-    /* overflow: hidden; */
-    margin: 0 auto;
-    
-    /* min-height: 40rem; */
-   overflow-x: hidden;
-}
-
-.grande {
-    width: 600%;
-    
-    /* background-color: orange; */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    
-    transition: all .5s ease;
-    transform: translate(-50%);
-
-}
-
-a {
-    width: calc( 100% /6);
-    min-height: 20rem;
-    /* background-color: lime; */
-    text-align: center;
-    text-decoration: none;
-    border-radius: 20px;    
-    
-}
-
-.carrousel .a:nth-child(1){
-    background-image: var(--landing-page);
-    background-size: cover;
-    background-position: center;
-    height: 100%;
    
-}
+  }
 
-.carrousel .a:nth-child(2){
-    background-image: var(--formulario);
-    background-size: cover;
-    background-position: center;
+  /* Enlaces estilizados dentro del carrusel */
+  .carousel-item a {
+    display: block;
+    width: 100%;
     height: 100%;
-    
+    background-image: var(--landing-page-image);
+    background-size: cover; 
+    background-position: center;
+    border-radius: 10px;
+  
+  }
+
+  .carousel-item:nth-child(2) > a {
+    /* Estilos para el enlace dentro del segundo elemento del carrusel */
+    background-image: var(--form-image);
+  }
+
+  .carousel-item:nth-child(3) > a {
+    /* Estilos para el enlace dentro del segundo elemento del carrusel */
+    background-image: var(--login-image);
+  }
+
+
+  
+  .carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo de las flechas */
+  width: 50px; /* Ancho de las flechas */
+  height: 50px; /* Altura de las flechas */
+  border-radius: 50%; /* Forma circular para las flechas */
+  top: 50%; /* Alineación vertical al centro */
+  transform: translateY(-50%); /* Ajuste para centrar verticalmente */
 }
 
-.puntos {
+.carousel-control-prev {
+  left: -25px; /* Posición izquierda de la flecha previa */
+}
 
-    width: 50%;
-    /* background-color: red; */
+.carousel-control-next {
+  right: -25px; /* Posición derecha de la flecha siguiente */
+}
+
+.carousel-item h3 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo */
+    width: 30%; /* Ancho del fondo del título */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size:large; /* Ajusta el tamaño del texto según sea necesario */
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* Distribución */
+.flex-column{
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-
+    /* flex-direction: column; */
+    align-items: center; /*Centra en lo horizontal*/
+    justify-content: center; /*Centra en lo vertical*/
 }
-
-.punto {
-    width: 2rem;
-    height: 2rem;
-    background-color: #DE9966;
-    margin: 2rem;
-    border-radius: 50%;
-    list-style: none;
-
-}
-
-.punto.activo{
-   background-color: #C5B7AE;
-
-}
-
-
-
-
-
 
 /* Tipografia */
 h1 {
     font-size: 3.8rem;
+    color: white;
+    margin: 2rem;
 }
 
 h2 {
@@ -182,4 +136,16 @@ h3 {
 }
 
 
+@media (width <= 599px){
 
+
+    /*Contenedores*/
+.contenedor {
+    width: 40rem;
+    /* margin: 0 auto; */
+    /* background-color: red; */
+    height: 50rem;
+}
+
+ 
+ }
