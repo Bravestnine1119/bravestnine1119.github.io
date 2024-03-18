@@ -21,6 +21,14 @@ body {
 
 /*Contenedores*/
 
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+
 .content {
     width: 330px;
     padding: 40px 30px;
@@ -42,12 +50,20 @@ body {
     width: 100%;
     display: flex;
     position: relative;
+    
   }
   
-  .field:nth-child(2) {
+  /* .field:nth-child(2) {
+    background-color: red;
+  }
+  
+   */
+
+  .field:nth-child(n+3):nth-child(-n+4) {
+    /* background-color: blue; */
     margin-top: 20px;
-  }
-  
+}
+
   .field .input {
     height: 100%;
     width: 100%;
@@ -72,6 +88,9 @@ body {
     color: #595959;
     width: 50px;
     line-height: 55px;
+    margin-left: 10px;
+    margin-top: 2px;
+ 
   }
   
   .field .label {
