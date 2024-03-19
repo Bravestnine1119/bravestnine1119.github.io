@@ -38,14 +38,31 @@ img {
 }
 
 /*Contenedores*/
+
+.carousel-inner {
+    
+    width: 70%;
+}
+
+
 .contenedor {
     width: 120rem;
     /* margin: 0 auto; */
     /* background-color: red; */
     padding: 2rem;
-
+    height: auto;
     background-color: rgba(0, 0, 0, 0.5);
 
+}
+
+
+
+.carousel {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
 }
 
 .separador {
@@ -54,10 +71,12 @@ img {
 }
 
 .carousel-item {
-    height: 40rem;
+    height: 25rem;
+    
     /* ajusta la altura según sea necesario */
     background-size: cover;
     background-position: center;
+
 
 
 }
@@ -74,14 +93,16 @@ img {
 
 }
 
-.carousel-item:nth-child(2)>a {
-    /* Estilos para el enlace dentro del segundo elemento del carrusel */
-    background-image: var(--form-image);
-}
-
 .carousel-item:nth-child(3)>a {
     /* Estilos para el enlace dentro del segundo elemento del carrusel */
+    background-image: var(--form-image);
+    /* background-color: blue; */
+}
+
+.carousel-item:nth-child(4)>a {
+    /* Estilos para el enlace dentro del segundo elemento del carrusel */
     background-image: var(--login-image);
+    /* background-color: red; */
 }
 
 
@@ -102,15 +123,7 @@ img {
     /* Ajuste para centrar verticalmente */
 }
 
-.carousel-control-prev {
-    left: -25px;
-    /* Posición izquierda de la flecha previa */
-}
 
-.carousel-control-next {
-    right: -25px;
-    /* Posición derecha de la flecha siguiente */
-}
 
 .carousel-item h3 {
     position: absolute;
