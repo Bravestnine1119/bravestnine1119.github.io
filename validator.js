@@ -52,3 +52,20 @@ function cambiarClasesSegunAnchoPantalla() {
 // Llamar a la función al cargar la página y al cambiar el tamaño de la ventana
 cambiarClasesSegunAnchoPantalla();
 window.addEventListener("resize", cambiarClasesSegunAnchoPantalla);
+
+// ===================================
+document.addEventListener('DOMContentLoaded', function () {
+  var checkbox = document.getElementById('dark-mode-toggle');
+  var container = document.querySelector('.contenedor');
+  var body = document.body; // Obtener el body
+
+  checkbox.addEventListener('change', function () {
+      if (checkbox.checked) {
+          container.classList.add('dark-mode');
+          body.style.backgroundColor = 'grey'; // Cambiar el color del body a gris
+      } else {
+          container.classList.remove('dark-mode');
+          body.style.backgroundColor = ''; // Restaurar el color de fondo predeterminado del body
+      }
+  });
+});
