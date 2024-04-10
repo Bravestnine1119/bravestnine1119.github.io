@@ -1,0 +1,32 @@
+{
+    "es": {
+      "title": "Suéter verde",
+      "description": "Experimenta el lujo con nuestro suéter verde premium. Confeccionado con la lana más fina, este suéter ofrece una comodidad incomparable y una calidez duradera. Su tono verde rico y uniforme y su calidad superior de tejido lo convierten en una adición atemporal a su guardarropa.",
+      "instruction": "Selecciona un idioma",
+      "price": "$ 2,091"
+    },
+    "it": {
+        "title": "Maglione verde",
+        "description": "Vivi l'abbraccio del lusso con il nostro maglione verde premium. Realizzato con la lana più fine, questo maglione offre un comfort senza pari e un calore duraturo. La sua ricca tonalità di verde uniforme e la qualità superiore della maglia lo rendono un'aggiunta senza tempo al tuo guardaroba.",
+        "instruction": "Seleziona una lingua",
+        "price": "€ 114.79"
+      },
+      "fr": {
+        "title": "Pull vert",
+        "description": "Découvrez l'étreinte du luxe avec notre pull vert haut de gamme. Fabriqué à partir de la laine la plus fine, ce pull offre un confort inégalé et une chaleur durable. Sa riche teinte verte uniforme et sa qualité de tricot supérieure en font un ajout intemporel à votre garde-robe.",
+        "instruction": "Sélectionnez une langue",
+        "price": "€ 114.79" 
+      },
+      "de": {
+        "title": "Grüner Pullover",
+        "description": "Erleben Sie den Luxus mit unserem Premium-Grünpullover. Hergestellt aus der feinsten Wolle, bietet dieser Pullover unvergleichlichen Komfort und anhaltende Wärme. Sein reiches, einheitliches Grün und die überlegene Strickqualität machen ihn zu einer zeitlosen Ergänzung für Ihre Garderobe.",
+        "instruction": "Wählen Sie eine Sprache",
+        "price": "€ 114.79" 
+      },
+      "en": {
+        "title": "Green sweater",
+        "description": "Experience the embrace of luxury with our premium green sweater. Crafted from the finest wool, this sweater offers unparalleled comfort and enduring warmth. Its rich, uniform green hue and superior knit quality make it a timeless addition to your wardrobe.",
+        "instruction": "Select a language",
+        "price": "£ 123.45"
+      }
+  }
